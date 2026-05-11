@@ -2,17 +2,56 @@
 
 > Here is [the working version](https://mate-academy.github.io/react_counter/)
 
-You have the `App` with a title and 3 buttons. Implement `addOne` and `add100` functions so the buttons work the next way:
+## Description
 
-- `Add 1` button calls `addOne` method to add `1` to the `count`;
-- `Add 100` button calls `add100` method to add `100` to the `count`;
-- `Increase` button calls `addOne` and then, if count is divisible by 5, it additionally calls `add100`.
+You are given an application with a counter and three buttons.
+Your task is to implement the logic for updating the counter.
 
-So the third button should count like this:
-`101, 102, 103, 104, 105, 206, 207, 208, 209, 210, 311 ...`
+---
+
+## Buttons behavior
+
+### Add 1
+
+* Calls `addOne`
+* Increases the counter by 1
+
+---
+
+### Add 100
+
+* Calls `add100`
+* Increases the counter by 100
+
+---
+
+### Increase
+
+* First calls `addOne` (adds 1 to the counter)
+* Then checks the updated value:
+
+  * If the new counter value gives remainder 1 when divided by 5, it additionally calls `add100`
+  * Otherwise, no additional action is performed
+
+---
+
+## Important note
+
+The condition must be checked after incrementing the counter by 1.
+
+---
+
+## Initial state
+
+```
+Count: 0
+```
+
+---
 
 ## Instructions
 - Install Prettier Extesion and use this [VSCode settings](https://mate-academy.github.io/fe-program/tools/vscode/settings.json) to enable format on save.
 - Implement a solution following the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline).
 - Open one more terminal and run tests with `npm test` to ensure your solution is correct.
 - Replace `<your_account>` with your Github username in the [DEMO LINK](https://<your_account>.github.io/react_counter-js/) and add it to PR description.
+
