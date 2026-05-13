@@ -27,17 +27,15 @@ Your task is to implement the logic for updating the counter.
 
 ### Increase
 
-* First calls `addOne` (adds 1 to the counter)
-* Then checks the updated value:
-
-  * If the new counter value gives remainder 1 when divided by 5, it additionally calls `add100`
-  * Otherwise, no additional action is performed
-
+* `Increase` button first checks the current `count` value:
+    * if the current value is divisible by `5`, it first calls `add100`;
+    * after that, it always calls `addOne`.
 ---
 
 ## Important note
 
-The condition must be checked after incrementing the counter by 1.
+* The condition must be checked after incrementing the counter by 1.
+* The `increase` function is already implemented and must not be changed.
 
 ---
 
